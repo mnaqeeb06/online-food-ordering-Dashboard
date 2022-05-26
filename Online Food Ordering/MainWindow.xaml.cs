@@ -24,11 +24,15 @@ namespace Online_Food_Ordering
         Control vendorsUserContron = new Vendors();
         Control workerControls = new WorkersControl();
         Control orderListControl = new orderListControl();
+
+        DateTime today = DateTime.Today;
         
+
         public MainWindow()
         {
             InitializeComponent();
             mainCnvas.Children.Add(homeuserControls);
+            date_label.Content = today;
         }
 
         private void Workers_Button_Click(object sender, RoutedEventArgs e)
@@ -68,7 +72,9 @@ namespace Online_Food_Ordering
 
         private void logout_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Login l = new Login();
+            this.Hide();
+            l.Show();
         }
 
         

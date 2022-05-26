@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Online_Food_Ordering"
              mc:Ignorable="d" 
              d:DesignHeight="550" d:DesignWidth="800">
-    <StackPanel Orientation="Vertical" Background="White">
+    <StackPanel Orientation="Vertical" >
         <StackPanel Orientation="Horizontal">
             <Grid Margin="20">
                 <Grid.ColumnDefinitions>

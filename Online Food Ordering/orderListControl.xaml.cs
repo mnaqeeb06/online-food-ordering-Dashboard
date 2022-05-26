@@ -24,24 +24,26 @@ namespace Online_Food_Ordering
 
         string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\onlinefood.mdf;Integrated Security=True";
         SqlConnection connection;
-      
+        OrderClassesDataContext orderDC;
 
         public orderListControl()
         {
             InitializeComponent();
             connection = new SqlConnection(connectionString);
+            orderDC = new OrderClassesDataContext(connection);
             displayData();
             calulation_Queries();
+
         }
 
         private void displayData() {
-            OrderClassesDataContext orderDC = new OrderClassesDataContext();
+           
             var result = from i in orderDC.GetTable<orderlistTable>() select i;
             gridView1.ItemsSource = result;
 
         }
         public void calulation_Queries() {
-            OrderClassesDataContext orderDC = new OrderClassesDataContext();
+           
             var newOrders = (from i in orderDC.GetTable<orderlistTable>() select i).Count();
 
             newOrder_Label.Content = newOrders;
@@ -50,11 +52,49 @@ namespace Online_Food_Ordering
             var delivererd = (from i in orderDC.GetTable<orderlistTable>() where i.Status.Contains("Delivered") select i).Count();
             delivered_label.Content = delivererd;
 
-            var total_amount = (from i in orderDC.GetTable<orderlistTable>() select i.Amount).Sum();
+            // calculate total amount of delivered orders 
+            var total_amount = (from i in orderDC.GetTable<orderlistTable>() where i.Status.Contains("Delivered") select i.Amount).Sum();
             amount_label.Content = total_amount;
 
             var cancel = orderDC.GetTable<orderlistTable>().Where(s=>s.Status.Contains("cancelled")).Count();
             cancelled_label.Content = cancel;
+        }
+
+        private void update_btn_Click(object sender, RoutedEventArgs e)
+        {
+            
+            int update_id = int.Parse(id_tb.Text);
+            orderlistTable order_row = orderDC.orderlistTables.First((s)=>s.Id.Equals(update_id));
+            order_row.Status = status_comboBox.Text;
+            orderDC.SubmitChanges();
+
+
+
+            //  var ns = from c in orderDC.orderlistTables 
+
+
+            
+            
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            calulation_Queries();
+            displayData();
+
+
+
         }
 
 

@@ -35,7 +35,6 @@
             <Button Content="Add" Margin="5" />
 
         </StackPanel>
-        <local:homeControl Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="622,169,-322,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
 
 
     </Grid>

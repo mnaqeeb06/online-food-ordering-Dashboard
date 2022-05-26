@@ -127,10 +127,10 @@
             </Button>
         </StackPanel>
 
-            
 
 
-        <DataGrid x:Name="datagridView" Height="200" ColumnWidth="*" AlternatingRowBackground="LightBlue" Margin="0 35 0 0"  Grid.Row="3" Grid.Column="0"     Grid.RowSpan="3" Grid.ColumnSpan="2" />
+
+        <DataGrid x:Name="datagridView" Height="200"  HeadersVisibility="Column" RowHeight="25" ColumnWidth="*" AlternatingRowBackground="LightBlue" Margin="0 35 0 0"  Grid.Row="3" Grid.Column="0"     Grid.RowSpan="3" Grid.ColumnSpan="2" />
         
     </Grid>
 

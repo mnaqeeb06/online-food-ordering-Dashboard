@@ -5,47 +5,82 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Online_Food_Ordering"
              mc:Ignorable="d" 
-             Background="White"
+             
              d:DesignHeight="550" d:DesignWidth="800">
-    <StackPanel Orientation="Vertical" >
-        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-            <StackPanel HorizontalAlignment="Center" Margin="25 0 25 0 " >
-                <Label x:Name="newOrder_Label" Content="" FontSize="70" FontWeight="Bold">
-                </Label>
-                <Label Content="New Orders" FontSize="15">
-                </Label>
-            </StackPanel>
+    <StackPanel Margin="20 0 20 20" Orientation="Vertical" >
 
-           
+        
             
-            <Rectangle VerticalAlignment="Stretch" Width="1" Height="100" Margin="2" Stroke="Gray" />
-            <StackPanel  Margin="25 0 25 0 " >
-                <Label x:Name="delivered_label" Content=""  FontSize="70" FontWeight="Bold">
-                </Label>
-                <Label Content="Delivered" FontSize="15">
-                </Label>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+
+                <StackPanel  HorizontalAlignment="Center" Margin="25 0 25 0 " >
+                    <Label x:Name="newOrder_Label" Margin="16 0 0 0" Content="" FontSize="70" FontWeight="Bold">
+                    </Label>
+                    <Label Content="New Orders" FontSize="15">
+                    </Label>
+                </StackPanel>
+
+
+
+
+                <Rectangle VerticalAlignment="Stretch" Width="1" Height="100" Margin="2" Stroke="Gray" />
+                <StackPanel  Margin="25 0 25 0 " >
+                    <Label x:Name="delivered_label" Margin="10 0 0 0" Content=""  FontSize="70" FontWeight="Bold">
+                    </Label>
+                    <Label Content="Delivered" FontSize="15">
+                    </Label>
+                </StackPanel>
+                <Rectangle VerticalAlignment="Stretch" Width="1" Height="100" Margin="2" Stroke="Gray" />
+                <StackPanel Margin="25 0 25 0 ">
+                    <Label x:Name="cancelled_label" Content="" Margin="10 0 0 0" FontSize="70" FontWeight="Bold">
+                    </Label>
+                    <Label  Content="Cancelled" FontSize="15">
+                    </Label>
+                </StackPanel>
+
+                <Rectangle VerticalAlignment="Stretch" Width="1" Height="100" Margin="2" Stroke="Gray" />
+                <StackPanel Margin="25 0 25 0 ">
+                    <Label x:Name="amount_label" Content="" Margin="13 0 0 0" FontSize="70" FontWeight="Bold">
+                    </Label>
+                    <Label Content="Amount" HorizontalAlignment="Center" FontSize="15">
+                    </Label>
+                </StackPanel>
+
+
             </StackPanel>
-            <Rectangle VerticalAlignment="Stretch" Width="1" Height="100" Margin="2" Stroke="Gray" />
-            <StackPanel Margin="25 0 25 0 ">
-                <Label x:Name="cancelled_label" Content="" Margin="13 0 0 0" FontSize="70" FontWeight="Bold">
+        
+        <DataGrid x:Name="gridView1" ColumnWidth="*" Height="200" Margin="0 40 0 0" RowHeight="25" Width="700"  AlternatingRowBackground="LightBlue" HeadersVisibility="Column">
+
+
+            </DataGrid>
+            <StackPanel HorizontalAlignment="Center"  Margin="0 10 0 0">
+                <Label HorizontalAlignment="Center" Content="Change delivery Status">
+
                 </Label>
-                <Label  Content="Cancelled" FontSize="15">
-                </Label>
+            <StackPanel Margin="0,10,0,0" HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Label Content="ID">
+                    </Label>
+                    <TextBox x:Name="id_tb" Width="100">
+                    </TextBox>
+                </StackPanel>
+                <ComboBox x:Name="status_comboBox" Width="200" Height="30"  Margin="0,10,0,0">
+                    <ComboBoxItem Content="Pending" IsSelected="True">
+                    </ComboBoxItem>
+                    <ComboBoxItem Content="Delivered" >
+                    </ComboBoxItem>
+                    <ComboBoxItem Content="cancelled" >
+                    </ComboBoxItem>
+                </ComboBox>
+                <Button Margin="0 7 0 0" HorizontalAlignment="Center"  Background="White" Name="update_btn"   Width="100" Height="35" BorderThickness="0" Click="update_btn_Click"  >
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center"  >
+                        <Image Source="Resources/update.png" >
+                        </Image>
+                        <Label Margin="6 0 0 0">Update</Label>
+                    </StackPanel>
+
+                </Button>
             </StackPanel>
+       
 
-            <Rectangle VerticalAlignment="Stretch" Width="1" Height="100" Margin="2" Stroke="Gray" />
-            <StackPanel Margin="25 0 25 0 ">
-                <Label x:Name="amount_label" Content="" Margin="13 0 0 0" FontSize="70" FontWeight="Bold">
-                </Label>
-                <Label Content="Amount" FontSize="15">
-                </Label>
-            </StackPanel>
-
-
-        </StackPanel>
-        <DataGrid x:Name="gridView1" ColumnWidth="*" RowHeight="25" Width="700"  AlternatingRowBackground="LightBlue" HeadersVisibility="Column">
-           
-
-        </DataGrid>
     </StackPanel>
 </UserControl>
