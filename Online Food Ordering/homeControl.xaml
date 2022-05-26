@@ -1,0 +1,189 @@
+﻿<UserControl x:Class="Online_Food_Ordering.homeControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Online_Food_Ordering"
+             mc:Ignorable="d" 
+             d:DesignHeight="550" d:DesignWidth="800">
+    <StackPanel Orientation="Vertical" Background="White">
+        <StackPanel Orientation="Horizontal">
+            <Grid Margin="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Image Grid.RowSpan="2" Grid.Column="0" Grid.Row="0" >
+                    <Image.Source >
+                        <BitmapImage UriSource="Resources/done_icon.png"/>
+                    </Image.Source>
+                </Image>
+                <Label Grid.Row="0" Grid.Column="1"  VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold">3100+
+                </Label>
+                <Label Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">TOTAL ORDERS 
+                </Label>
+
+                
+            </Grid>
+
+            <Grid Margin="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Image Grid.RowSpan="2" Grid.Column="0" Grid.Row="0" >
+                    <Image.Source >
+                        <BitmapImage UriSource="Resources/agent_icon.png"/>
+                    </Image.Source>
+                </Image>
+                <Label Grid.Row="0" Grid.Column="1"  VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold">417
+                </Label>
+                <Label Grid.Row="1" Grid.Column="1">ACTIVE AGENTS
+                </Label>
+
+
+            </Grid>
+            <Grid Margin="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Image Grid.RowSpan="2" Grid.Column="0" Grid.Row="0" >
+                    <Image.Source >
+                        <BitmapImage UriSource="Resources/money_icon.png"/>
+                    </Image.Source>
+                </Image>
+                <Label Grid.Row="0" Grid.Column="1"  VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold">3100+
+                </Label>
+                <Label Grid.Row="1" Grid.Column="1">TOTAL ORDERS
+                </Label>
+
+
+            </Grid>
+
+        </StackPanel>
+
+        <Label Margin="20" FontSize="20" FontWeight="Bold">Trending Vendors
+            </Label>
+
+        <Grid Margin="0,10,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Width="90" Height="90">
+                <Image.Source>
+                    <BitmapImage UriSource="Resources/Kfc_logo.png"/>
+                </Image.Source>
+            </Image>
+            <Label x:Name="vender1_label" Grid.Row="0" Grid.Column="1"  VerticalAlignment="Bottom" FontSize="20" >KFC
+            </Label>
+            <Label x:Name="vender1_review" Grid.Row="1" Grid.Column="1">245 reviews
+            </Label>
+
+            <Label x:Name="vender1_interest" Grid.Row="0" Grid.Column="2"  VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold">45%
+            </Label>
+            <Label Grid.Row="1" Grid.Column="2">Interest
+            </Label>
+            <Label x:Name="vender1_order" Grid.Row="0" Grid.Column="3"  VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold">45
+            </Label>
+            <Label Grid.Row="1" Grid.Column="3">Orders
+            </Label>
+
+        </Grid>
+
+        <Grid Margin="0,10,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Width="90" Height="90">
+                <Image.Source>
+                    <BitmapImage UriSource="Resources/mcdonalds_logo.png"/>
+                </Image.Source>
+            </Image>
+            <Label x:Name="vender2_label" Grid.Row="0" Grid.Column="1"  VerticalAlignment="Bottom" FontSize="20" >Mcdonalds
+            </Label>
+            <Label x:Name="vender2_review" Grid.Row="1" Grid.Column="1">222 reviews
+            </Label>
+
+            <Label x:Name="vender2_interest" Grid.Row="0" Grid.Column="2"  VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold">43%
+            </Label>
+            <Label Grid.Row="1" Grid.Column="2">Interest
+            </Label>
+            <Label x:Name="vender2_order" Grid.Row="0" Grid.Column="3"  VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold">41
+            </Label>
+            <Label Grid.Row="1" Grid.Column="3">Orders
+            </Label>
+
+        </Grid>
+
+        <Grid Margin="0,10,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Width="90" Height="90">
+                <Image.Source>
+                    <BitmapImage UriSource="Resources/hotel_logo.png"/>
+                </Image.Source>
+            </Image>
+            <Label x:Name="vender3_label" Grid.Row="0" Grid.Column="1"  VerticalAlignment="Bottom" FontSize="20" >Mcdonalds
+            </Label>
+            <Label x:Name="vender3_review" Grid.Row="1" Grid.Column="1">210 reviews
+            </Label>
+
+            <Label x:Name="vender3_interest" Grid.Row="0" Grid.Column="2"  VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold">39%
+            </Label>
+            <Label Grid.Row="1" Grid.Column="2">Interest
+            </Label>
+            <Label x:Name="vender3_order" Grid.Row="0" Grid.Column="3"  VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold">32
+            </Label>
+            <Label Grid.Row="1" Grid.Column="3">Orders
+            </Label>
+
+        </Grid>
+    </StackPanel>
+</UserControl>

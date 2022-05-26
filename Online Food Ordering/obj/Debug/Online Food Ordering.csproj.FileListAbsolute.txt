@@ -1,0 +1,31 @@
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\bin\Debug\Online Food Ordering.exe.config
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\bin\Debug\Online Food Ordering.exe
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\bin\Debug\Online Food Ordering.pdb
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\Online Food Ordering.csprojAssemblyReference.cache
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\MainWindow.g.cs
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\Signup.g.cs
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\App.g.cs
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\Online Food Ordering_MarkupCompile.cache
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\Online Food Ordering_MarkupCompile.lref
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\MainWindow.baml
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\Signup.baml
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\Online Food Ordering.g.resources
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\Online_Food_Ordering.Properties.Resources.resources
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\Online Food Ordering.csproj.GenerateResource.cache
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\Online Food Ordering.csproj.CoreCompileInputs.cache
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\Online Food Ordering.exe
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\Online Food Ordering.pdb
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\Login.g.cs
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\Login.baml
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\homeControl.g.cs
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\homeControl.baml
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\Vendors.g.cs
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\Vendors.baml
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\WorkersControl.g.cs
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\WorkersControl.baml
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\bin\Debug\onlinefood.mdf
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\bin\Debug\onlinefood_log.ldf
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\Online Food Ordering_Content.g.cs
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\orderListControl.g.cs
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\orderListControl.baml
+C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\GeneratedInternalTypeHelper.g.cs

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="onlinefood" Class="OrderClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\onlinefood.mdf;Integrated Security=True" SettingsObjectName="Online_Food_Ordering.Properties.Settings" SettingsPropertyName="onlinefoodConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.orderlistTable" Member="orderlistTables">
+    <Type Name="orderlistTable">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="time" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="[order]" Member="order" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Cusumer_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

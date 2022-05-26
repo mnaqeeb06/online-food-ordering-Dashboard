@@ -1,0 +1,59 @@
+﻿<Window x:Class="Online_Food_Ordering.Signup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Online_Food_Ordering"
+        mc:Ignorable="d"
+        Title="Signup" Height="650" Width="850">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="396*" />
+            <ColumnDefinition Width="377*" />
+            
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+
+        </Grid.RowDefinitions>
+        <Image Margin="50,50,50,59" Grid.Column="0" Grid.Row="0"  Height="auto" Width="auto" >
+
+            <Image.Source>
+                <BitmapImage DecodePixelWidth="300" UriSource="Resources/signup_img.png"/> 
+            </Image.Source>
+        </Image>
+
+        <StackPanel Orientation="Vertical" Margin="40" Grid.Column="1" Grid.Row="0">
+            <Label FontSize="35" FontWeight="Bold" Content="Sign Up" />
+            <Label FontSize="15"  Content="Name" />
+            <TextBox x:Name="signUP_Name_tb" Height="23" Margin="5" TextWrapping="Wrap" Text=""/>
+
+            <Label FontSize="15"  Content="Email" />
+            <TextBox x:Name="signUP_Email_tb" Height="23" Margin="5" TextWrapping="Wrap" Text=""/>
+
+            <Label FontSize="15"  Content="Phone Number" />
+            <TextBox x:Name="signUP_phone_tb" Height="23" Margin="5" TextWrapping="Wrap" Text=""/>
+
+            <Label FontSize="15"  Content="Password" />
+
+            <PasswordBox x:Name="signUP_password_tb" Height="23" Margin="5" ></PasswordBox>
+            <Label FontSize="15"  Content="Conform Password" />
+            <PasswordBox x:Name="signUP_conformPassword_tb" Height="23" Margin="5" ></PasswordBox>
+            <CheckBox Content="I agree to all the Term and Policy" Margin="5"/>
+            <Button x:Name="signUP_btn" Content="SIGN UP" Margin="5" Click="signup_click"/>
+            <Label Content="-------------------------------OR--------------------------------------"/>
+            <Button Background="White" >
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center"  >
+                    <Image Source="Resources/google.png" >
+
+                    </Image>
+                    <Label Margin="6">SignIn with Google</Label>
+                </StackPanel>
+            </Button>
+            <Button Background="White" Content="Already have an account?" BorderThickness="0" BorderBrush="White" Padding="10" Click="Button_Click_1">
+                
+            </Button>
+            <Label x:Name="message" Foreground="Red" Content="" />
+        </StackPanel>
+        
+    </Grid>
+</Window>

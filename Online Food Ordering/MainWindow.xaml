@@ -1,0 +1,161 @@
+﻿<Window x:Class="Online_Food_Ordering.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+
+        mc:Ignorable="d"
+        xmlns:local="clr-namespace:Online_Food_Ordering"
+        Title="MainWindow" Height="700" Width="1200">
+    <DockPanel x:Name="MainDockPanel">
+
+        <!-- Left side bar-->
+        <StackPanel DockPanel.Dock="Left" Background="#FFF5EFD7" Width="200">
+            <Image  Grid.Column="0" Grid.Row="0"  Height="auto" Width="auto" >
+
+                <Image.Source>
+                    <BitmapImage  UriSource="Resources/login_img.png"/>
+                </Image.Source>
+            </Image>
+            <Button BorderThickness="0"  Padding="5" HorizontalContentAlignment="Left" Width="200" Background="#FFF5EFD7" Click="Home_Button_Click">
+                <StackPanel Margin="15,0,0,0" Orientation="Horizontal"   >
+                    <Image  Source="Resources/home_icon.png" >
+
+                    </Image>
+                    <Label Margin="6">Home</Label>
+                </StackPanel>
+            </Button>
+            <Button BorderThickness="0" Padding="5" Width="200" HorizontalContentAlignment="Left" Background="#FFF5EFD7" Click="Vendors_Button_Click">
+                <StackPanel Margin="15,0,0,0" Orientation="Horizontal"   >
+                    <Image  Source="Resources/vendor.png" >
+
+                    </Image>
+                    <Label Margin="6">Vendors</Label>
+                </StackPanel>
+            </Button>
+            <Button BorderThickness="0" Padding="5" Width="200" HorizontalContentAlignment="Left" Background="#FFF5EFD7" Click="OrderList_Button_Click">
+                <StackPanel Margin="15,0,0,0" Orientation="Horizontal"   >
+                    <Image  Source="Resources/orderList_icon.png" >
+
+                    </Image>
+                    <Label Margin="6">Order List</Label>
+                </StackPanel>
+            </Button>
+            <Button  BorderThickness="0" Padding="5" Width="200" HorizontalContentAlignment="Left" Background="#FFF5EFD7" Click="Order_Button_Click">
+                <StackPanel Margin="15,0,0,0" Orientation="Horizontal"   >
+                    <Image  Source="Resources/order_icon.png" >
+
+                    </Image>
+                    <Label Margin="6">Order</Label>
+                </StackPanel>
+            </Button>
+            <Button BorderThickness="0" Padding="5" Width="200" HorizontalContentAlignment="Left" Background="#FFF5EFD7" Click="Workers_Button_Click">
+                <StackPanel Margin="15,0,0,0" Orientation="Horizontal"   >
+                    <Image  Source="Resources/workers_icon.png" >
+
+                    </Image>
+                    <Label Margin="6">Workers</Label>
+                </StackPanel>
+            </Button>
+
+            <Label  Height="170"></Label>
+            <Button Padding="5" BorderThickness="0" HorizontalContentAlignment="Left" Width="200" Background="#FFF5EFD7" Click="logout_Button_Click">
+                <StackPanel Margin="15,0,0,0" Orientation="Horizontal"   >
+                    <Image  Source="Resources/logout_icon.png" >
+
+                    </Image>
+                    <Label Margin="6">Logout</Label>
+                </StackPanel>
+            </Button>
+
+        </StackPanel>
+        <!--For Right side -->
+        <StackPanel  DockPanel.Dock="Right" Width="250">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Right">Muhammad Naqeeb
+                </Label>
+                <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Right">mnaqeeb512@gmail.com
+                </Label>
+
+                <Image Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" Margin="20">
+                    <Image.Source >
+                        <BitmapImage UriSource="Resources/user_icon.png"/>
+                    </Image.Source>
+                </Image>
+            </Grid>
+            <Border Margin="15" BorderThickness="2" BorderBrush="Black">
+                <Grid Margin="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" FontSize="15" FontWeight="Bold">
+                        Mon, Mar 23
+                    </Label>
+                    <Label Grid.Row="1" Grid.Column="0"  FontSize="15" FontWeight="Bold">
+                        103
+                    </Label>
+                    <Label Grid.Row="1" Grid.Column="1"  FontSize="15" FontWeight="Bold">
+                        87
+                    </Label>
+                    <Label Grid.Row="1" Grid.Column="2"  FontSize="15" FontWeight="Bold">
+                        10,456
+                    </Label>
+                    <Label Grid.Row="2" Grid.Column="0"  FontSize="15" >
+                        Orders
+                    </Label>
+                    <Label Grid.Row="2" Grid.Column="1"  FontSize="15" >
+                        Done
+                    </Label>
+                    <Label Grid.Row="2" Grid.Column="2"  FontSize="15" >
+                        Earn
+                    </Label>
+                </Grid>
+            </Border>
+
+            <Label Margin="15, 7 ,0 ,0" FontSize="20" FontWeight="Bold">Pending
+            </Label>
+
+            <CheckBox Margin="20,5,15,5" Content="Cake(Rs. 700)                                 X1"/>
+            <CheckBox Margin="20,5,15,5" Content="Briyani(Rs. 800)                              X1"/>
+            <CheckBox Margin="20,5,15,5" Content="Pizza(Rs. 750)                                 X1"/>
+            <CheckBox Margin="20,5,15,5" Content="Burger(Rs. 700)                              X1"/>
+            <CheckBox Margin="20,5,15,5" Content="Cake(Rs. 700)                                 X1"/>
+            <CheckBox Margin="20,5,15,5" Content="Cake(Rs. 550)                                 X1"/>
+            <CheckBox Margin="20,5,15,5" Content="Pizza(Rs. 700)                                 X1"/>
+            <CheckBox Margin="20,5,15,5" Content="Cake(Rs. 700)                                 X1"/>
+
+            <Button Padding="8" Margin="25">
+                Delivered
+            </Button>
+
+        </StackPanel>
+        <!-- top bar-->
+        <StackPanel Height="80" DockPanel.Dock="Top" Background="White" >
+            <Label Margin="20" FontSize="20" FontWeight="Bold">Dashboard
+            </Label>
+
+        </StackPanel>
+
+
+        <Canvas x:Name="mainCnvas" Height="579" VerticalAlignment="Center" HorizontalAlignment="Center" Width="726" Margin="0,0,0,10"/>
+    </DockPanel>
+</Window>
