@@ -24,7 +24,7 @@
                         <BitmapImage UriSource="Resources/done_icon.png"/>
                     </Image.Source>
                 </Image>
-                <Label Grid.Row="0" Grid.Column="1"  VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold">3100+
+                <Label x:Name="tb_totalOrder"  Grid.Row="0" Grid.Column="1"  VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold">3100+
                 </Label>
                 <Label Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">TOTAL ORDERS 
                 </Label>
@@ -71,7 +71,7 @@
                         <BitmapImage UriSource="Resources/money_icon.png"/>
                     </Image.Source>
                 </Image>
-                <Label Grid.Row="0" Grid.Column="1"  VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold">3100+
+                <Label x:Name="tb_amount" Grid.Row="0" Grid.Column="1"  VerticalAlignment="Bottom" FontSize="20" FontWeight="Bold">3100+
                 </Label>
                 <Label Grid.Row="1" Grid.Column="1">TOTAL ORDERS
                 </Label>

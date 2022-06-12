@@ -7,35 +7,117 @@
              
              mc:Ignorable="d"
              Background="White" d:DesignHeight="550" d:DesignWidth="800">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+        <TextBox x:Name="searchBox" Width="500" BorderThickness="0 0 0 1" >
+                
+            </TextBox>
+            <Button Background="White" Padding="5" BorderThickness="0" HorizontalContentAlignment="Left"   Click="Search_Button_Click">
+                
+                    <Image Width="20"  Source="Resources/search.png" >
 
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-
-        </Grid.RowDefinitions>
-        <StackPanel Width="350" Margin="20" Grid.Column="0" Grid.Row="0">
-            <Label FontSize="18" FontWeight="Bold" Content="Add Venders" />
-            <Label   Content="Name" />
-            <TextBox Height="23"  TextWrapping="Wrap" Text=""/>
-
-            <Label   Content="CNIC" />
-            <TextBox Height="23"  TextWrapping="Wrap" Text=""/>
-
-            <Label   Content="Phone Number" />
-            <TextBox Height="23"  TextWrapping="Wrap" Text=""/>
-
-            <Label  Content="Location" />
-            <TextBox Height="23" Margin="5" TextWrapping="Wrap" Text=""/>
-
-            <Button Content="Add" Margin="5" />
-
+                    </Image>
+                    
+                
+            </Button>
         </StackPanel>
 
+        <DataGrid x:Name="datagridView" Height="180"  HeadersVisibility="Column" RowHeight="25" ColumnWidth="132" AlternatingRowBackground="LightBlue" Margin="20 35 20 20"   />
+  
+        
+        <Grid Margin="22 10 22 10 " >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"  />
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition/>
+                <RowDefinition/>
 
-    </Grid>
+
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="350"/>
+                <ColumnDefinition Width="350"/>
+
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0">
+              
+                <StackPanel>
+                    <Label Content="Id">
+                    </Label>
+                    <TextBox Name="id_tb" Width="300" Height="25">
+                    </TextBox>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Grid.Row="0" Grid.Column="1" Margin="0 0 50 0">
+                <Label Content="Name">
+                </Label>
+                <TextBox Name="verdor_name_tb"  Height="25">
+                </TextBox>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="0" Margin="0 0 50 0">
+                <Label Content="Review">
+                </Label>
+                <TextBox Name="review_tb"  Height="25">
+                </TextBox>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="1" Margin="0 0 50 0">
+                <Label Content="Interest">
+                </Label>
+                <TextBox Name="Interest_tb"  Height="25">
+                </TextBox>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Grid.Column="0" Margin="0 0 50 0">
+                <Label Content="Total Order">
+                </Label>
+                <TextBox Name="order_tb" Height="25">
+                </TextBox>
+            </StackPanel>
+
+            <StackPanel  HorizontalAlignment="Left" Orientation="Horizontal" Grid.Row="2" Grid.Column="1">
+                <Button Margin="0 0 0 0" BorderThickness="0" Background="White" Name="add_btn"   Width="100" Height="35" HorizontalAlignment="Left" Click="Add_btn_Click" >
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center"  >
+                        <Image Source="Resources/add.png" >
+
+                        </Image>
+                        <Label Margin="6 0 0 0">Add</Label>
+                    </StackPanel>
+
+                </Button>
+
+                <Button Background="White" BorderThickness="0" Name="update_btn"   Width="100" Height="35" HorizontalAlignment="Left" Click="Update_btn_Click"  >
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center"  >
+                        <Image Source="Resources/update.png" >
+
+                        </Image>
+                        <Label Margin="6 0 0 0">Update</Label>
+                    </StackPanel>
+
+                </Button>
+
+                <Button Margin="0 0 0 0" HorizontalAlignment="Center" Background="White" Name="delete_btn"   Width="100" Height="35" BorderThickness="0" Click="Delete_btn_Click"  >
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center"  >
+                        <Image Source="Resources/remove.png" >
+
+                        </Image>
+                        <Label Margin="6 0 0 0">Delete</Label>
+                    </StackPanel>
+
+                </Button>
+            </StackPanel>
+
+        </Grid>
+
+
+
+
+    </StackPanel>
 </UserControl>
+

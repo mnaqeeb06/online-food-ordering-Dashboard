@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Online_Food_Ordering"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Icon="Resources/main.png"
         Title="Login" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -12,14 +14,14 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <StackPanel  Grid.Column="0" Grid.Row="0" Margin="30" VerticalAlignment="Center">
-            <Label HorizontalAlignment="Center" FontSize="35" FontWeight="Bold" Content="Log In" />
+            <Label HorizontalAlignment="Center" FontSize="35" FontWeight="Bold" Content="LogIn" />
             
             <Label FontSize="15"  Content="Email or Username" />
             <TextBox x:Name="login_email_tb" Height="23" Margin="5" TextWrapping="Wrap" Text=""/>
 
             
             <Label FontSize="15"  Content="Password" />
-            <TextBox x:Name="login_password_tb" Height="23" Margin="5" TextWrapping="Wrap" Text=""/>
+            <PasswordBox x:Name="login_password_tb" Height="23" Margin="5" />
 
             <CheckBox Content="Remember me" Margin="5"/>
             <Button Content="LOG IN" Margin="5" Click="LoginBtn_Click"/>

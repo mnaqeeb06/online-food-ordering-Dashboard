@@ -87,6 +87,11 @@
     <Compile Include="orderListControl.xaml.cs">
       <DependentUpon>orderListControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="OrderTrackDataClasses.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderTrackDataClasses.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Signup.xaml.cs">
       <DependentUpon>Signup.xaml</DependentUpon>
     </Compile>
@@ -159,6 +164,14 @@
     <None Include="OrderClasses.dbml.layout">
       <DependentUpon>OrderClasses.dbml</DependentUpon>
     </None>
+    <None Include="OrderTrackDataClasses.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>OrderTrackDataClasses.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrderTrackDataClasses.dbml.layout">
+      <DependentUpon>OrderTrackDataClasses.dbml</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -227,6 +240,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\main.png" />
+    <Resource Include="Icon1.ico" />
     <Content Include="onlinefood.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -234,6 +249,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>onlinefood.mdf</DependentUpon>
     </Content>
+    <Resource Include="Resources\live.png" />
+    <Resource Include="Resources\search.png" />
     <Resource Include="Resources\add.png" />
     <Resource Include="Resources\remove.png" />
     <Resource Include="Resources\update.png" />

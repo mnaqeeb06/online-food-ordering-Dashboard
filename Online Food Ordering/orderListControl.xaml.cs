@@ -62,43 +62,24 @@ namespace Online_Food_Ordering
 
         private void update_btn_Click(object sender, RoutedEventArgs e)
         {
-            
-            int update_id = int.Parse(id_tb.Text);
-            orderlistTable order_row = orderDC.orderlistTables.First((s)=>s.Id.Equals(update_id));
-            order_row.Status = status_comboBox.Text;
-            orderDC.SubmitChanges();
-
-
-
-            //  var ns = from c in orderDC.orderlistTables 
-
 
             
-            
-           
+            try
+            {
+                int update_id = int.Parse(id_tb.Text);
+                orderlistTable order_row = orderDC.orderlistTables.First((s) => s.Id.Equals(update_id));
+                order_row.Status = status_comboBox.Text;
+                orderDC.SubmitChanges();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-            calulation_Queries();
-            displayData();
-
-
-
+                calulation_Queries();
+                displayData();
+            }
+            catch
+            {
+                MessageBox.Show("This Id does not exixt!", "Incorrect Input", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
         }
-
-
     }
-
-
 }

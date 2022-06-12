@@ -5,12 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Online_Food_Ordering"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Icon="Resources/main.png"
         Title="Signup" Height="650" Width="850">
+    
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="396*" />
-            <ColumnDefinition Width="377*" />
-            
+            <ColumnDefinition Width="431*" />
+            <ColumnDefinition Width="296*" />
+            <ColumnDefinition Width="116*"/>
+
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
 
@@ -18,12 +22,12 @@
         <Image Margin="50,50,50,59" Grid.Column="0" Grid.Row="0"  Height="auto" Width="auto" >
 
             <Image.Source>
-                <BitmapImage DecodePixelWidth="300" UriSource="Resources/signup_img.png"/> 
+                <BitmapImage DecodePixelWidth="300" UriSource="Resources/signup_img.png"/>
             </Image.Source>
         </Image>
 
-        <StackPanel Orientation="Vertical" Margin="40" Grid.Column="1" Grid.Row="0">
-            <Label FontSize="35" FontWeight="Bold" Content="Sign Up" />
+        <StackPanel Orientation="Vertical" Margin="40" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2">
+            <Label FontSize="35" FontWeight="Bold" Content="SignUp" />
             <Label FontSize="15"  Content="Name" />
             <TextBox x:Name="signUP_Name_tb" Height="23" Margin="5" TextWrapping="Wrap" Text=""/>
 
@@ -50,10 +54,10 @@
                 </StackPanel>
             </Button>
             <Button Background="White" Content="Already have an account?" BorderThickness="0" BorderBrush="White" Padding="10" Click="Button_Click_1">
-                
+
             </Button>
             <Label x:Name="message" Foreground="Red" Content="" />
         </StackPanel>
-        
+
     </Grid>
 </Window>

@@ -65,6 +65,7 @@ namespace Online_Food_Ordering
 
         private void Home_Button_Click(object sender, RoutedEventArgs e)
         {
+            Control homeuserControls = new homeControl();
             mainCnvas.Children.Clear();
             mainCnvas.Children.Add(homeuserControls);
             
@@ -77,6 +78,9 @@ namespace Online_Food_Ordering
             l.Show();
         }
 
-        
+        private void webSearck_Button_Click(object sender, RoutedEventArgs e)
+        {
+            webbrowser.Navigate("http://bigbite.somee.com");
+        }
     }
 }

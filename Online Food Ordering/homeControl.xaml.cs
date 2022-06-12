@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Controls;
 using System.Data.SqlClient;
+using System.Linq;
 
 namespace Online_Food_Ordering
 {
@@ -9,6 +10,9 @@ namespace Online_Food_Ordering
     /// </summary>
     public partial class homeControl : UserControl
     {
+       
+
+
         string connectionString;
         SqlConnection connection;
         String query;
@@ -17,6 +21,9 @@ namespace Online_Food_Ordering
         public homeControl()
         {
             InitializeComponent();
+            getOrderDetails();
+
+
             connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\onlinefood.mdf;Integrated Security=True";
             connection = new SqlConnection(connectionString);
             connection.Open();
@@ -74,6 +81,36 @@ namespace Online_Food_Ordering
 
             }
             connection.Close();
+
+          
+
+        }
+
+        public void getOrderDetails() {
+
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\onlinefood.mdf;Integrated Security=True";
+            SqlConnection connection = new SqlConnection(connectionString); 
+            OrderClassesDataContext orderDC = new OrderClassesDataContext(connection);
+           
+            
+
+            var newOrders = (from i in orderDC.GetTable<orderlistTable>() select i).Count();
+
+            tb_totalOrder.Content = newOrders + " +";
+
+            // var newOrders = (from i in orderDC.GetTable<orderlistTable>() where Status= select i).Count();
+           // var delivererd = (from i in orderDC.GetTable<orderlistTable>() where i.Status.Contains("Delivered") select i).Count();
+           // delivered_label.Content = delivererd;
+
+            // calculate total amount of delivered orders 
+            var total_amount = (from i in orderDC.GetTable<orderlistTable>() where i.Status.Contains("Delivered") select i.Amount).Sum();
+            tb_amount.Content = total_amount +" $";
+
+            //  var cancel = orderDC.GetTable<orderlistTable>().Where(s => s.Status.Contains("cancelled")).Count();
+            //  cancelled_label.Content = cancel;
+
+            connection.Close();
+
 
         }
     }

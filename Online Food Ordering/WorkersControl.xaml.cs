@@ -38,11 +38,55 @@ namespace Online_Food_Ordering
             command = new SqlCommand(query, connection);
 
             string GENDER;
-            if (male_rb.IsChecked==true) {
-                GENDER = "M";
+            if (female_rb.IsChecked==true) {
+                GENDER = "F";
 
             } else {
-                GENDER = "F";
+                GENDER = "M";
+            }
+
+
+            try {
+                int.Parse(id_tb.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Please enter valid 'Id'!", "Incorrect Input", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (int.Parse(id_tb.Text) == 0) {
+                MessageBox.Show("'Id' cannot be zero!", "Incorrect Input", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            if (name_tb.Text.Equals(null))
+            {
+                MessageBox.Show("Name cannot be left empty", "Incorrect Input", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+
+            try
+            {
+                int.Parse(age_tb.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Please enter valid 'Age'!", "Incorrect Input", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (int.Parse(age_tb.Text)==0) {
+                MessageBox.Show("Age Cannot be zero!", "Incorrect Input", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+
+
+            if (GENDER.Equals(null))
+            {
+                MessageBox.Show("Please Select Gender", "Incorrect Input", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
             }
 
             command.Parameters.AddWithValue("idd", id_tb.Text);
@@ -53,14 +97,23 @@ namespace Online_Food_Ordering
             command.Parameters.AddWithValue("phone", phone_tb.Text);
 
 
-            adapter.InsertCommand = command;
-            adapter.InsertCommand.ExecuteNonQuery();
-            adapter.Update(dt);
+            try
+            {
 
-            connection.Close();
+                adapter.InsertCommand = command;
+                adapter.InsertCommand.ExecuteNonQuery();
+                adapter.Update(dt);
 
-            displayData();
+                connection.Close();
 
+                displayData();
+            }
+            catch
+            {
+
+                MessageBox.Show("Id cannot be dublicated", "Duplication", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
         }
 
         private void displayData() {
@@ -106,7 +159,49 @@ namespace Online_Food_Ordering
 
         private void Update_btn_Click(object sender, RoutedEventArgs e)
         {
-            connection = new SqlConnection(connectionString);
+
+            //Validation
+            try
+            {
+                int.Parse(id_tb.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Please enter valid 'Id'!", "Incorrect Input", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (int.Parse(id_tb.Text) == 0)
+            {
+                MessageBox.Show("'Id' cannot be zero!", "Incorrect Input", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            if (name_tb.Text.Equals(null))
+            {
+                MessageBox.Show("Name cannot be left empty", "Incorrect Input", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+
+            try
+            {
+                int.Parse(age_tb.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Please enter valid 'Age'!", "Incorrect Input", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (int.Parse(age_tb.Text) == 0)
+            {
+                MessageBox.Show("Age Cannot be zero!", "Incorrect Input", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+           
+
+                connection = new SqlConnection(connectionString);
             connection.Open();
             String newName = name_tb.Text;
             int newAge = int.Parse(age_tb.Text);
@@ -115,14 +210,16 @@ namespace Online_Food_Ordering
 
             int idd = int.Parse(id_tb.Text);
 
+           
+                string query = $"UPDATE workers_table SET Name={newName} Age={newAge},CNIC={newCNIC},PhoneNumber={newPhone} WHERE id={idd}";
 
-            string query = $"UPDATE workers_table SET Age={newAge},CNIC={newCNIC},PhoneNumber={newPhone} WHERE id={idd}";
+                adapter.InsertCommand = new SqlCommand(query, connection);
+                adapter.InsertCommand.ExecuteNonQuery();
+                connection.Close();
 
-            adapter.InsertCommand = new SqlCommand(query,connection);
-            adapter.InsertCommand.ExecuteNonQuery();
-            connection.Close();
-
-            displayData();
+                displayData();
+            
+            
         }
     }
 }

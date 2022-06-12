@@ -6,13 +6,11 @@
 
         mc:Ignorable="d"
         xmlns:local="clr-namespace:Online_Food_Ordering"
-        Title="MainWindow" Height="700" Width="1200"
+        Title="Home" Height="700" Width="1200"
         WindowStartupLocation="CenterScreen"
-
+        Icon="Resources/main.png"
         >
 
-    
-        
         <DockPanel x:Name="MainDockPanel">
 
             <!-- Left side bar-->
@@ -47,7 +45,7 @@
                         <Label Margin="6">Order List</Label>
                     </StackPanel>
                 </Button>
-                <Button  BorderThickness="0" Padding="5" Width="200" HorizontalContentAlignment="Left" Background="#FFF5EFD7" Click="Order_Button_Click">
+            <!--    <Button  BorderThickness="0" Padding="5" Width="200" HorizontalContentAlignment="Left" Background="#FFF5EFD7" Click="Order_Button_Click">
                     <StackPanel Margin="15,0,0,0" Orientation="Horizontal"   >
                         <Image  Source="Resources/order_icon.png" >
 
@@ -55,6 +53,7 @@
                         <Label Margin="6">Order</Label>
                     </StackPanel>
                 </Button>
+                -->
                 <Button BorderThickness="0" Padding="5" Width="200" HorizontalContentAlignment="Left" Background="#FFF5EFD7" Click="Workers_Button_Click">
                     <StackPanel Margin="15,0,0,0" Orientation="Horizontal"   >
                         <Image  Source="Resources/workers_icon.png" >
@@ -64,7 +63,7 @@
                     </StackPanel>
                 </Button>
 
-                <Label  Height="170"></Label>
+                <Label  Height="210"></Label>
                 <Button Padding="5" BorderThickness="0" HorizontalContentAlignment="Left" Width="200" Background="#FFF5EFD7" Click="logout_Button_Click">
                     <StackPanel Margin="15,0,0,0" Orientation="Horizontal"   >
                         <Image  Source="Resources/logout_icon.png" >
@@ -117,14 +116,14 @@
                         <Label x:Name="date_label" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" FontSize="15" FontWeight="Bold">
                             Mon, Mar 23
                         </Label>
-                        <Label Grid.Row="1" Grid.Column="0"  FontSize="15" FontWeight="Bold">
-                            103
+                        <Label x:Name="boxOrders" Grid.Row="1" Grid.Column="0"  FontSize="15" FontWeight="Bold">
+                            2
                         </Label>
                         <Label Grid.Row="1" Grid.Column="1"  FontSize="15" FontWeight="Bold">
-                            87
+                           1
                         </Label>
                         <Label Grid.Row="1" Grid.Column="2"  FontSize="15" FontWeight="Bold">
-                            10,456
+                            1115
                         </Label>
                         <Label Grid.Row="2" Grid.Column="0"  FontSize="15" >
                             Orders
@@ -137,9 +136,17 @@
                         </Label>
                     </Grid>
                 </Border>
+            <Label HorizontalAlignment="Center" Padding="0 0 10 0 " FontSize="20" FontWeight="Bold" Content="Live Web"/>
+            <Border >
+            <WebBrowser x:Name="webbrowser" Height="350"/>
+            </Border>
+            <Button BorderThickness="0"   HorizontalContentAlignment="Center" Background="White" Click="webSearck_Button_Click">
+                <Image Width="45"  Source="Resources/live.png" >
 
-                <Label Margin="15, 7 ,0 ,0" FontSize="20" FontWeight="Bold">Pending
-                </Label>
+                </Image>
+            </Button>
+            <!--
+                
 
                 <CheckBox Margin="20,5,15,5" Content="Cake(Rs. 700)                                 X1"/>
                 <CheckBox Margin="20,5,15,5" Content="Briyani(Rs. 800)                              X1"/>
@@ -153,8 +160,9 @@
                 <Button Padding="8" Margin="25">
                     Delivered
                 </Button>
-
+-->
             </StackPanel>
+                
             <!-- top bar-->
             <StackPanel Height="80" DockPanel.Dock="Top" Background="White" >
                 <Label Margin="20" FontSize="20" FontWeight="Bold">Dashboard

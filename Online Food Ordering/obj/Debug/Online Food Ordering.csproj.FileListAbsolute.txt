@@ -28,4 +28,3 @@ C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\b
 C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\Online Food Ordering_Content.g.cs
 C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\orderListControl.g.cs
 C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\orderListControl.baml
-C:\Users\toshiba c55t-a\source\repos\Online Food Ordering\Online Food Ordering\obj\Debug\GeneratedInternalTypeHelper.g.cs

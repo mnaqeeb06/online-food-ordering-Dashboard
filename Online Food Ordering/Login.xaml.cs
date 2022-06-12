@@ -26,14 +26,14 @@ namespace Online_Food_Ordering
 
             SqlCommand comd = new SqlCommand(query,connection);
             comd.Parameters.AddWithValue("email", login_email_tb.Text);
-            comd.Parameters.AddWithValue("password", login_password_tb.Text);
+            comd.Parameters.AddWithValue("password", login_password_tb.Password.ToString());
 
             SqlDataReader dataReader = comd.ExecuteReader();
             bool check = false;
             while (dataReader.Read())
             {
 
-                if (dataReader[0].ToString() == login_email_tb.Text && dataReader[3].ToString() == login_password_tb.Text) {
+                if (dataReader[0].ToString() == login_email_tb.Text && dataReader[3].ToString() == login_password_tb.Password.ToString()) {
                     MainWindow w = new MainWindow();
                     w.Show();
                     this.Hide();
@@ -46,6 +46,11 @@ namespace Online_Food_Ordering
             if (!check) {
                 message.Content = "*Invalid Login";
             }
+
+        }
+
+        private void Login_password_tb_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
 
         }
     }
